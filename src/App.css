@@ -1,0 +1,59 @@
+.table {
+  table-layout: fixed;
+}
+
+.table-row:hover {
+  cursor: pointer;
+  background-color: #138ab52c;
+}
+
+.app-modal {
+  display: none;
+}
+
+.organization-id {
+  width: 100%;
+}
+
+.checkbox {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.apvl-vequest-ch {
+  border: 0.0625rem solid #e0e0e0;
+  border-radius: 0.25rem;
+  padding: 0.2rem;
+}
+
+.apvl-vequest-ch:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 10px #138ab5;
+  -moz-box-shadow: 0 0 10px #138ab5;
+  box-shadow: 0 0 10px #138ab5;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.apvl-vequest-ch-cont {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem;
+}
+
+.search-fn {
+  width: 30%;
+  display: flex;
+  gap: 0.625rem;
+}
