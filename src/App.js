@@ -16,6 +16,7 @@ function App() {
 
   const approveRequest = (vequest) => {
     vequest.approved = true;
+    vequest.verified_on = new Date().toLocaleDateString("en-US");
 
     fetch(`${VEQUEST_ENDPOINT_URL}/${vequest.pubkey}`, {
       method: "PUT",
@@ -55,13 +56,15 @@ function App() {
 
     return (
       <label className="apvl-vequest-ch" htmlFor="approveVequestCheckbox">
-        <input
-          className="checkbox"
-          type="checkbox"
-          id="approveVequestCheckbox"
-          onChange={() => setVequestTarget(vequest)}
-        />
-        Approve verification requests
+        <div className="apvl-vequest-ch-cont">
+          <input
+            className="checkbox"
+            type="checkbox"
+            id="approveVequestCheckbox"
+            onChange={() => setVequestTarget(vequest)}
+          />
+          Approve verification requests
+        </div>
       </label>
     );
   };
@@ -84,6 +87,10 @@ function App() {
           <tr>
             <td>Public Key:</td>
             <td>{vequest.pubkey}</td>
+          </tr>
+          <tr>
+            <td>Organization Name:</td>
+            <td>{vequest.organization_name}</td>
           </tr>
           <tr>
             <td>Information Link:</td>
@@ -173,6 +180,7 @@ function App() {
             onClick={handleShow}
           >
             <td className="text-truncate">{vequest.pubkey}</td>
+            <td className="text-truncate">{vequest.organization_name}</td>
             <td className="text-truncate">{vequest.info_link}</td>
             <td className="text-truncate">{vequest.official_website}</td>
             <td className="text-truncate">{vequest.official_email}</td>
@@ -198,6 +206,7 @@ function App() {
           onClick={handleShow}
         >
           <td className="text-truncate">{item.pubkey}</td>
+          <td className="text-truncate">{item.organization_name}</td>
           <td className="text-truncate">{item.info_link}</td>
           <td className="text-truncate">{item.official_website}</td>
           <td className="text-truncate">{item.official_email}</td>
@@ -268,6 +277,7 @@ function App() {
         <thead>
           <tr>
             <th scope="col">Public Key</th>
+            <th scope="col">Organization Name</th>
             <th scope="col">Verification Link</th>
             <th scope="col">Official Website</th>
             <th scope="col">Official Email</th>

@@ -31,18 +31,12 @@
   border: 0.0625rem solid #e0e0e0;
   border-radius: 0.25rem;
   padding: 0.2rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .apvl-vequest-ch:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 0 10px #138ab5;
-  -moz-box-shadow: 0 0 10px #138ab5;
   box-shadow: 0 0 10px #138ab5;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 }
 
 .apvl-vequest-ch-cont {
