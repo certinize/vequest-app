@@ -125,7 +125,7 @@ function App() {
             <td>
               <img
                 className="organization-id"
-                src={vequest.organization_id}
+                src={"data:image/svg;base64," + vequest.organization_id}
                 alt="Organization ID"
               />
             </td>
