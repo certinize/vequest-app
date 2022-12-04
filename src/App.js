@@ -63,7 +63,7 @@ function App() {
             id="approveVequestCheckbox"
             onChange={() => setVequestTarget(vequest)}
           />
-          Approve verification requests
+          Approve request
         </div>
       </label>
     );
